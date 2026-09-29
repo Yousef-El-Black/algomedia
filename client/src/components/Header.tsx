@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import { useState } from "react";
+import MenuPopUp from "./MenuPopUp";
 
 const menuLinks = [
   {
@@ -29,12 +33,28 @@ type MenuLinkType = {
 };
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="py-3 fixed top-0 left-0 w-full z-90">
-      <div className="container h-18">
+      <div className="container h-18 relative z-90">
         <div className="w-full h-full shadow-2xl shadow-shadow rounded-[35px] flex justify-between items-center px-5 bg-card">
           <div className="left">
-            <ul className="flex flex-row-reverse gap-4 font-bold">
+            <div
+              className="menu-icon rounded-full bg-soft p-2 cursor-pointer lg:hidden"
+              onClick={toggleMenu}
+            >
+              {!isMenuOpen ? (
+                <MenuIcon fontSize="large" />
+              ) : (
+                <CloseIcon fontSize="large" />
+              )}
+            </div>
+            <ul className="hidden lg:flex flex-row-reverse gap-4 font-bold">
               {menuLinks.map((item: MenuLinkType, index: number) => {
                 return (
                   <li key={"menuLink-" + index} className=" ">
@@ -57,6 +77,11 @@ const Header = () => {
           </Link>
         </div>
       </div>
+      <MenuPopUp
+        setIsOpen={setIsMenuOpen}
+        isOpen={isMenuOpen}
+        menu={menuLinks}
+      />
     </header>
   );
 };
