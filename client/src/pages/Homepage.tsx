@@ -40,6 +40,7 @@ const Homepage = () => {
                 src="/assets/Excited 3D Cartoon Character Using Laptop Sitting on a Bean Bag - 480x480.png"
                 alt=""
                 className="animate-movingUpDown h-4/5"
+                loading="lazy"
               />
               <div className="hidden lg:block absolute top-10 right-10 bg-card p-5 text-xl font-bold rounded-lg shadow-shadowsm shadow-md">
                 نمو اسرع

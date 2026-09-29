@@ -1,15 +1,20 @@
+import { lazy } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "./Header";
-import Footer from "./Footer";
+import { Suspense } from "react";
+import Preloader from "./Preloader";
+const Header = lazy(() => import("./Header"));
+const Footer = lazy(() => import("./Footer"));
 
 const Layout = () => {
   return (
     <>
-      <Header />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
+      <Suspense fallback={<Preloader />}>
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </Suspense>
     </>
   );
 };
