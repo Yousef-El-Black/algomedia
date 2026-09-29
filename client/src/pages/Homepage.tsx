@@ -24,7 +24,7 @@ const Homepage = () => {
   return (
     <>
       <section id="home" className="bg-soft min-h-screen pt-30">
-        <div className="container flex items-center justify-center gap-5">
+        <div className="container flex flex-col lg:flex-row items-center justify-center gap-5">
           <div className="left flex-1">
             <div className="rounded-full relative aspect-square flex justify-center items-center h-full">
               <div
@@ -41,18 +41,20 @@ const Homepage = () => {
                 alt=""
                 className="animate-movingUpDown h-4/5"
               />
-              <div className="absolute top-10 right-10 bg-card p-5 text-xl font-bold rounded-lg shadow-shadowsm shadow-md">
+              <div className="hidden lg:block absolute top-10 right-10 bg-card p-5 text-xl font-bold rounded-lg shadow-shadowsm shadow-md">
                 نمو اسرع
               </div>
-              <div className="absolute bottom-10 left-10 bg-card p-5 text-xl font-bold rounded-lg shadow-shadowsm shadow-md">
+              <div className="hidden lg:block absolute bottom-10 left-10 bg-card p-5 text-xl font-bold rounded-lg shadow-shadowsm shadow-md">
                 تنفيذ ذكي
               </div>
             </div>
           </div>
           <div className="right flex-1 flex flex-col justify-around items-end">
-            <span className="eyebrow">حلول رقمية تنمو مع مشروعك</span>
+            <span className="eyebrow mx-auto lg:mx-0">
+              حلول رقمية تنمو مع مشروعك
+            </span>
             <div className="text text-end py-5">
-              <h1 className="font-extrabold text-6xl">
+              <h1 className="font-extrabold text-5xl lg:text-6xl text-center lg:text-end">
                 حلول ذكية
                 <br />{" "}
                 <span className="text-primary mt-3 block">
@@ -60,13 +62,13 @@ const Homepage = () => {
                   لأفكارك الرقمية
                 </span>
               </h1>
-              <p className="py-5 leading-10 text-xl">
+              <p className="py-5 px-5 lg:px-0 leading-8 lg:leading-10 text-xl text-center lg:text-end">
                 نساعدك على تحويل أفكارك إلى تجارب رقمية استثنائية باستخدام أحدث
                 التقنيات، من تصميم المواقع إلى التسويق الرقمي وإدارة الحضور على
                 منصات التواصل.
               </p>
             </div>
-            <div className="btns flex flex-row-reverse items-center gap-5 justify-end">
+            <div className="btns flex flex-row-reverse items-center gap-5 mx-auto lg:mx-0 justify-center lg:justify-end">
               <Link className="btn primary-btn" to="/#services">
                 اكتشف خدماتنا
               </Link>
@@ -74,17 +76,17 @@ const Homepage = () => {
                 تواصل معنا
               </Link>
             </div>
-            <div className="cards flex flex-row-reverse gap-5 my-5">
+            <div className="cards flex flex-col lg:flex-row-reverse w-full lg:w-auto gap-5 my-5">
               {cardsData.map((card: CardDataType, index: number) => {
                 return (
                   <div
                     key={"home-card-" + index}
-                    className="flex flex-col text-end bg-card shadow-lg shadow-shadow py-5 px-8 gap-2 rounded-lg"
+                    className="flex flex-col text-center lg:text-end bg-card shadow-lg shadow-shadow py-5 px-8 gap-2 rounded-lg"
                   >
                     <span className="text-3xl font-extrabold text-primary">
                       {card.num}+
                     </span>
-                    <span className="text-muted ">{card.title}</span>
+                    <span className="text-muted font-bold">{card.title}</span>
                   </div>
                 );
               })}
