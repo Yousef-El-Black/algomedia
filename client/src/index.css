@@ -9,6 +9,22 @@ body {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
+.btn {
+  @apply font-bold px-5 py-4 rounded-full shadow shadow-shadowsm duration-200 hover:-translate-y-1;
+}
+
+.primary-btn {
+  @apply bg-linear-to-br from-primary to-secondary text-soft;
+}
+
+.secondary-btn {
+  @apply bg-card hover:bg-primary hover:text-white;
+}
+
+.eyebrow {
+  @apply text-sm py-4 ps-4 pe-10 relative before:bg-accent before:w-2 before:h-2 before:absolute before:top-1/2 before:right-5 before:-translate-y-1/2 before:rounded-full rounded-full bg-[#1557ff17] text-primary font-bold;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -17,5 +33,18 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@theme {
+  --animate-movingUpDown: movingUpDown 3s ease-in-out infinite;
+  @keyframes movingUpDown {
+    0%,
+    100% {
+      transform: translateY(20px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
 }

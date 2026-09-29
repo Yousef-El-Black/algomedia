@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <header className="py-3 fixed top-0 left-0 w-full z-90">
       <div className="container h-18">
-        <div className="w-full h-full shadow-2xl shadow-shadow rounded-[35px] flex justify-between items-center px-5">
+        <div className="w-full h-full shadow-2xl shadow-shadow rounded-[35px] flex justify-between items-center px-5 bg-card">
           <div className="left">
             <ul className="flex flex-row-reverse gap-4 font-bold">
               {menuLinks.map((item: MenuLinkType, index: number) => {
@@ -40,7 +40,7 @@ const Header = () => {
                   <li key={"menuLink-" + index} className=" ">
                     <Link
                       to={item.link}
-                      className="h-14 py-2 px-4 rounded-full bg-linear-to-br hover:from-primary hover:to-secondary hover:text-white hover:translate-y-10 relative transition-transform duration-300"
+                      className="h-14 py-2 px-4 rounded-full bg-linear-to-br hover:from-primary hover:to-secondary hover:text-white duration-300"
                     >
                       {item.title}
                     </Link>
@@ -53,11 +53,7 @@ const Header = () => {
             to="/"
             className="right h-full flex justify-center items-center"
           >
-            <img
-              src="/public/assets/circle-logo.png"
-              alt=""
-              className="h-4/5"
-            />
+            <img src="/assets/circle-logo.png" alt="" className="h-4/5" />
           </Link>
         </div>
       </div>
