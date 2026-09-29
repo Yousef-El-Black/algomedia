@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply font-body;
 }
