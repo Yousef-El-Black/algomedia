@@ -24,10 +24,16 @@ const config: Config = {
         shadowsm: "rgba(21, 38, 85, 0.08)",
       },
       fontFamily: {
-        // Example custom fonts: sans: ['Inter', 'sans-serif']
-        heading: ["Raleway", "sans-serif"],
-        // body: ["Nunito", "sans-serif"],
-        body: "'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        raleway: ["Raleway", "sans-serif"],
+        cairo: [
+          "Cairo",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "sans-serif",
+        ],
+        alex: ["Alexandria", "sans-serif"],
       },
     },
   },

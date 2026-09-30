@@ -5,6 +5,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import App from "./App";
 import { persistor, store } from "./redux/store";
 import "./index.css";
+// import "./assets/fonts.css"; // Import the font CSS here
 
 const rootElement = document.getElementById("root");
 

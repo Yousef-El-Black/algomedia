@@ -58,7 +58,7 @@ const Header = () => {
             <ul className="hidden lg:flex flex-row-reverse gap-4 font-bold">
               {menuLinks.map((item: MenuLinkType, index: number) => {
                 return (
-                  <li key={"menuLink-" + index} className=" ">
+                  <li key={"menuLink-" + index} className="font-cairo">
                     <HashLink
                       to={item.link}
                       className="h-14 py-2 px-4 rounded-full bg-linear-to-br hover:from-primary hover:to-secondary hover:text-white duration-300"

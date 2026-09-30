@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Services from "../components/Services";
+import About from "../components/About";
 
 const cardsData = [
   {
@@ -100,6 +101,7 @@ const Homepage = () => {
         </div>
       </section>
       <Services />
+      <About />
     </>
   );
 };
