@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Services from "../components/Services";
 
 const cardsData = [
   {
@@ -63,7 +64,10 @@ const Homepage = () => {
                   لأفكارك الرقمية
                 </span>
               </h1>
-              <p className="py-5 px-5 lg:px-0 leading-8 lg:leading-10 text-xl text-center lg:text-end">
+              <p
+                className="py-5 px-5 lg:px-0 leading-8 lg:leading-10 text-xl text-center lg:text-start"
+                dir="rtl"
+              >
                 نساعدك على تحويل أفكارك إلى تجارب رقمية استثنائية باستخدام أحدث
                 التقنيات، من تصميم المواقع إلى التسويق الرقمي وإدارة الحضور على
                 منصات التواصل.
@@ -95,6 +99,7 @@ const Homepage = () => {
           </div>
         </div>
       </section>
+      <Services />
     </>
   );
 };
