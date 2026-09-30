@@ -44,7 +44,7 @@ const About = () => {
           </div>
           <div className="right flex-2 rounded-xl overflow-hidden relative shadow-xl shadow-shadow">
             <img
-              src="./../../public/assets/b842583b2176aace3eab9547d28d1239.jpg"
+              src="/assets/b842583b2176aace3eab9547d28d1239.jpg"
               alt="3D About Us Image Hero"
               className="w-full h-full bg-cover"
             />
