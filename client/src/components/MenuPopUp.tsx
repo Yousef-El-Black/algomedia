@@ -30,6 +30,7 @@ const MenuPopUp = ({
                   <Link
                     to={menuItem.link}
                     className="p-4 block w-full my-3 font-bold hover:text-soft hover:bg-linear-to-br from-primary to-secondary rounded-full cursor-pointer duration-300"
+                    aria-label={`Go to ${menuItem.title} Section`}
                   >
                     {menuItem.title}
                   </Link>

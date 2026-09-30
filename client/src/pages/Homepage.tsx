@@ -75,10 +75,18 @@ const Homepage = () => {
               </p>
             </div>
             <div className="btns flex flex-row-reverse items-center gap-5 mx-auto lg:mx-0 justify-center lg:justify-end">
-              <Link className="btn primary-btn" to="/#services">
+              <Link
+                className="btn primary-btn"
+                to="/#services"
+                aria-label="Go to Services Section"
+              >
                 اكتشف خدماتنا
               </Link>
-              <Link className="btn secondary-btn" to="/#contact">
+              <Link
+                className="btn secondary-btn"
+                to="/#contact"
+                aria-label="Go to Contact Section"
+              >
                 تواصل معنا
               </Link>
             </div>
