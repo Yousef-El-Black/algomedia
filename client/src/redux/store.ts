@@ -1,4 +1,3 @@
-// import { configureStore } from "@reduxjs/toolkit";
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import {
   persistStore,
@@ -10,7 +9,7 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
-import counterReducer from "./slicers/counterSlice";
+import msgSlice from "./slicers/msgSlice";
 
 const storage = {
   getItem: async (key: string) => {
@@ -33,7 +32,7 @@ const storage = {
 
 // 1. Combine all your reducers
 const rootReducer = combineReducers({
-  counter: counterReducer,
+  msg: msgSlice, // Add your message slice reducer here
 });
 
 // 2. Set up your persist configuration

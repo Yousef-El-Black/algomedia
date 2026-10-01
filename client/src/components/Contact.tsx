@@ -3,8 +3,37 @@ import MailIcon from "@mui/icons-material/Mail";
 import LocationIcon from "@mui/icons-material/LocationOn";
 import { Link } from "react-router-dom";
 import { socialLinks, type socialLinkType } from "../assets/SocialMeiaLinks";
+import { useState } from "react";
+import { sendEmail } from "../assets/EmailJs";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    mobile: "",
+    email: "",
+    service: "",
+    details: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (Object.values(formData).every((value) => !!value)) {
+      sendEmail(e, formData);
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   return (
     <section id="contact" className="bg-soft">
       <div className="container py-20">
@@ -99,6 +128,7 @@ const Contact = () => {
           <form
             className="flex-3 bg-white rounded-3xl shadow-shadow shadow-lg p-10 flex flex-col gap-5"
             dir="rtl"
+            onSubmit={handleSubmit}
           >
             <div className="flex flex-col lg:flex-row gap-5">
               <div className="name flex-1">
@@ -111,6 +141,7 @@ const Contact = () => {
                   name="name"
                   placeholder="أدخل اسمك "
                   className="w-full border border-muted rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-card bg-soft"
+                  onChange={handleChange}
                 />
               </div>
               <div className="mobile flex-1">
@@ -123,6 +154,7 @@ const Contact = () => {
                   name="mobile"
                   placeholder="أدخل رقم جوالك "
                   className="w-full border border-muted rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-card bg-soft"
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -136,6 +168,7 @@ const Contact = () => {
                 name="email"
                 placeholder="أدخل بريدك الإلكتروني "
                 className="w-full border border-muted rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-card bg-soft"
+                onChange={handleChange}
               />
             </div>
             <div className="service">
@@ -146,6 +179,7 @@ const Contact = () => {
                 id="service"
                 name="service"
                 className="w-full border border-muted rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-card bg-soft"
+                onChange={handleChange}
               >
                 <option value="" disabled>
                   اختر الخدمة
@@ -168,6 +202,7 @@ const Contact = () => {
                 placeholder="أدخل تفاصيل مشروعك "
                 className="w-full border border-muted rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-card bg-soft"
                 rows={4}
+                onChange={handleChange}
               />
             </div>
             <button
