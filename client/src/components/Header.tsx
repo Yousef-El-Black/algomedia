@@ -4,34 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 import MenuPopUp from "./MenuPopUp";
 import { HashLink } from "react-router-hash-link";
-
-const menuLinks = [
-  {
-    title: "الرئيسية",
-    link: "/#home",
-  },
-  {
-    title: "خدماتنا",
-    link: "/#services",
-  },
-  {
-    title: "من نحن",
-    link: "/#about",
-  },
-  {
-    title: "أعمالنا",
-    link: "/#works",
-  },
-  {
-    title: "اتصل بنا",
-    link: "/#contact",
-  },
-];
-
-type MenuLinkType = {
-  title: string;
-  link: string;
-};
+import { menuLinks, type MenuLinkType } from "../assets/MenuLinks";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
