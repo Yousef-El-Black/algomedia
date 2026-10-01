@@ -3,6 +3,7 @@ import Services from "../components/Services";
 import About from "../components/About";
 import Works from "../components/Works";
 import Testmonials from "../components/Testmonials";
+import Contact from "../components/Contact";
 
 const cardsData = [
   {
@@ -114,6 +115,7 @@ const Homepage = () => {
       <About />
       <Works />
       <Testmonials />
+      <Contact />
     </>
   );
 };

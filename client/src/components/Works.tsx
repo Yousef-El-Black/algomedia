@@ -46,7 +46,7 @@ type workItemType = {
 
 const Works = () => {
   return (
-    <section className="bg-soft">
+    <section className="bg-soft" id="works">
       <div className="container py-20">
         <span className="eyebrow mx-auto block w-fit">أعمالنا</span>
         <h3 className="text-center pt-5 text-3xl lg:text-6xl font-extrabold lg:w-4/5 mx-auto leading-9 lg:leading-20 mb-8">
