@@ -136,7 +136,7 @@ const Contact = () => {
               dir="rtl"
             >
               <div className="text font-bold text-xl">تابعنا علي</div>
-              <ul className="flex gap-5 items-center justify-center">
+              <ul className="flex gap-5 items-center justify-center flex-wrap">
                 {socialLinks.map((item: socialLinkType, index: number) => {
                   return (
                     <li key={"social-link-" + index}>
