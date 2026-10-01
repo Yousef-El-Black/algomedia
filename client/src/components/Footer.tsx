@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-ink text-white py-10" dir="rtl">
       <div className="container">
-        <div className="top flex flex-col lg:flex-row gap-10 items-center">
+        <div className="top flex flex-col lg:flex-row gap-10 items-center lg:items-start">
           <div className="logo lg:flex-3 flex flex-col gap-4 justify-center items-center lg:items-start">
             <img
               src="/assets/circle-logo.svg"
@@ -28,7 +28,7 @@ const Footer = () => {
                   <li key={"footer-menu-link-" + index}>
                     <Link
                       to={item.link}
-                      className="text-white hover:text-muted duration-300"
+                      className="text-muted hover:text-white duration-300"
                       aria-label={`Go to ${item.title} Section`}
                     >
                       {item.title}
@@ -44,7 +44,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/#services"}
-                  className="text-white hover:text-muted duration-300"
+                  className="text-muted hover:text-white duration-300"
                   aria-label={`Go to Services Section`}
                 >
                   إدارة الميديا
@@ -53,7 +53,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/#services"}
-                  className="text-white hover:text-muted duration-300"
+                  className="text-muted hover:text-white duration-300"
                   aria-label={`Go to Services Section`}
                 >
                   الحملات الإعلانية
@@ -62,7 +62,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/#services"}
-                  className="text-white hover:text-muted duration-300"
+                  className="text-muted hover:text-white duration-300"
                   aria-label={`Go to Services Section`}
                 >
                   تصميم المواقع
@@ -71,7 +71,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/#services"}
-                  className="text-white hover:text-muted duration-300"
+                  className="text-muted hover:text-white duration-300"
                   aria-label={`Go to Services Section`}
                 >
                   استشارات رقمية
