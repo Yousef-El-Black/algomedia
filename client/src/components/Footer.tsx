@@ -15,7 +15,7 @@ const Footer = () => {
               className="w-12 h-12 rounded-full flex-justify-center items-center"
             />
             <h2 className="text-2xl font-bold py-3">ألجو</h2>
-            <p className="text-muted text-lg text-center lg:text-starts leading-8">
+            <p className="text-muted text-lg text-center lg:text-start leading-8">
               شريكك الموثوق في التحول الرقمي. نقدم حلولًا تقنية وتسويقية متكاملة
               لنمو عملك.
             </p>
