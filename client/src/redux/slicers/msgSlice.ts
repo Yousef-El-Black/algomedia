@@ -1,16 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+
+type Message = string;
 
 const msgSlice = createSlice({
-  name: "msg",
+  name: "msgs",
   initialState: {
-    value: "",
+    value: [] as Message[],
   },
   reducers: {
-    setMsg: (state, action) => {
-      state.value = action.payload;
+    setMsgs: (state, action: PayloadAction<Message>) => {
+      state.value = [...state.value, action.payload];
+    },
+    delMsg: (state, action: PayloadAction<Message>) => {
+      state.value = state.value.filter((msg) => msg !== action.payload);
     },
   },
 });
 
-export const { setMsg } = msgSlice.actions;
+export const { setMsgs, delMsg } = msgSlice.actions;
 export default msgSlice.reducer;

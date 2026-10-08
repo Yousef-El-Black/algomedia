@@ -32,7 +32,7 @@ const storage = {
 
 // 1. Combine all your reducers
 const rootReducer = combineReducers({
-  msg: msgSlice, // Add your message slice reducer here
+  msgs: msgSlice, // Add your message slice reducer here
 });
 
 // 2. Set up your persist configuration

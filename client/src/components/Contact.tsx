@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { socialLinks, type socialLinkType } from "../assets/SocialMeiaLinks";
 import { useState } from "react";
 import { sendEmail } from "../assets/EmailJs";
+import { useDispatch } from "react-redux";
+import { addMsg } from "../utils/msg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,10 +17,15 @@ const Contact = () => {
     details: "",
   });
 
+  const dispatch = useDispatch();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (Object.values(formData).every((value) => !!value)) {
       sendEmail(e, formData);
+      addMsg(dispatch, "تم إرسال الرسالة بنجاح");
+    } else {
+      addMsg(dispatch, "يرجى ملء جميع الحقول قبل الإرسال");
     }
   };
 
