@@ -3,11 +3,11 @@ import { BehanceIcon } from "../icons/BehanceIcon";
 
 // Icons
 import FacebookIcon from "@mui/icons-material/Facebook";
-import XIcon from "@mui/icons-material/X";
+// import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import PinterestIcon from "@mui/icons-material/Pinterest";
+// import PinterestIcon from "@mui/icons-material/Pinterest";
 // import TwitterIcon from '@mui/icons-material/Twitter';
 // import GitHubIcon from '@mui/icons-material/GitHub';
 // import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -18,17 +18,13 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 export const socialLinks = [
   {
     icon: <FacebookIcon fontSize="large" />,
-    link: "/",
+    link: "https://www.facebook.com/share/1PT2t6wJp6/",
     label: "Go to Facebook page",
   },
-  {
-    icon: <XIcon fontSize="large" />,
-    link: "/",
-    label: "Go to X page",
-  },
+
   {
     icon: <InstagramIcon fontSize="large" />,
-    link: "/",
+    link: "https://www.instagram.com/algoformedia?cplk=N2RxNDVxbGx0emtu",
     label: "Go to Instagram page",
   },
   {
@@ -38,13 +34,8 @@ export const socialLinks = [
   },
   {
     icon: <WhatsAppIcon fontSize="large" />,
-    link: "/",
+    link: "https://wa.me/966534762037",
     label: "Go to WhatsApp page",
-  },
-  {
-    icon: <PinterestIcon fontSize="large" />,
-    link: "/",
-    label: "Go to Pinterest page",
   },
   {
     icon: <BehanceIcon fontSize="large" />,

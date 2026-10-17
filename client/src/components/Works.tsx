@@ -23,7 +23,7 @@ const workItems = [
     link: "https://mahmoudhassan-c11.github.io/templete-three/",
   },
   {
-    img: "/assets/past work/الصخرة.png",
+    img: "/assets/past work/Rock.png",
     label: "حملات إعلانية",
     title: "الصخرة لتلميع السيارات",
     text: "حملة إعلانية مدفوعة حققت زيادة كبيرة في الحجوزات خلال شهر واحد.",
