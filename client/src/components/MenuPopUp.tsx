@@ -9,6 +9,25 @@ const MenuPopUp = ({
   isOpen: boolean;
   menu: { title: string; link: string }[];
 }) => {
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    link: string,
+  ) => {
+    setIsOpen(false);
+
+    const hashIndex = link.indexOf("#");
+    if (hashIndex !== -1) {
+      const targetId = link.substring(hashIndex + 1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", link);
+      }
+    }
+  };
+
   return (
     <div
       className={`z-89 lg:hidden fixed w-screen h-screen top-0 left-0 ${isOpen ? "" : "hidden"}`}
@@ -18,17 +37,14 @@ const MenuPopUp = ({
         onClick={() => setIsOpen(false)}
       ></div>
       <div className="container absolute top-25">
-        <ul className="menu bg-white  w-full rounded-lg text-center p-4">
+        <ul className="menu bg-white w-full rounded-lg text-center p-4">
           {menu.map(
             (menuItem: { title: string; link: string }, index: number) => {
               return (
-                <li
-                  key={"menuitem-" + index}
-                  className="w-full"
-                  onClick={() => setIsOpen(false)}
-                >
+                <li key={"menuitem-" + index} className="w-full">
                   <Link
                     to={menuItem.link}
+                    onClick={(e) => handleLinkClick(e, menuItem.link)}
                     className="p-4 block w-full my-3 font-bold hover:text-soft hover:bg-linear-to-br from-primary to-secondary rounded-full cursor-pointer duration-300"
                     aria-label={`Go to ${menuItem.title} Section`}
                   >

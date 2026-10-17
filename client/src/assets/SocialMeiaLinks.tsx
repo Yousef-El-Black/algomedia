@@ -18,37 +18,37 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 export const socialLinks = [
   {
     icon: <FacebookIcon fontSize="large" />,
-    link: "https://www.facebook.com/yourpage",
+    link: "/",
     label: "Go to Facebook page",
   },
   {
     icon: <XIcon fontSize="large" />,
-    link: "https://www.x.com/yourpage",
+    link: "/",
     label: "Go to X page",
   },
   {
     icon: <InstagramIcon fontSize="large" />,
-    link: "https://www.instagram.com/yourpage",
+    link: "/",
     label: "Go to Instagram page",
   },
   {
     icon: <LinkedInIcon fontSize="large" />,
-    link: "https://www.linkedin.com/in/yourpage",
+    link: "https://www.linkedin.com/company/algo-for-media/",
     label: "Go to LinkedIn page",
   },
   {
     icon: <WhatsAppIcon fontSize="large" />,
-    link: "https://wa.me/yourphonenumber",
+    link: "/",
     label: "Go to WhatsApp page",
   },
   {
     icon: <PinterestIcon fontSize="large" />,
-    link: "https://www.pinterest.com/yourpage",
+    link: "/",
     label: "Go to Pinterest page",
   },
   {
     icon: <BehanceIcon fontSize="large" />,
-    link: "https://www.behance.net/yourpage",
+    link: "http://www.behance.net/algoformedia",
     label: "Go to Behance page",
   },
 ];
